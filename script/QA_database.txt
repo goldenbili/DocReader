@@ -1,0 +1,923 @@
+[Intent:]
+intentQ1
+What is the maximum distance between KE69X0 Transmitter and Receiver?
+What is the maximum distance between KE69X0 Transmitter and KE69x0 Receiver?
+What is the maximum distance between Transmitter and Receiver for KE69X0?
+[End]
+
+[Key Word:]
+Credibility:3
+KE69X0
+maximum distance
+Transmitter
+Receiver
+[End]
+
+[Ans:]
+Since the KE69X0 uses standard IP protocols to transfer media and data, 
+in theory there are no distance limitations, however, there are limitations 
+inherent with network devices(hubs, switches, routers, etc.),
+bandwidth considerations,and network device settings (IGMP).
+[End]
+
+[Intent:]
+intentQ2
+What switches have been certified to work with the KE69xx?
+What switches have been certified for the KE69xx?
+Dose any switches have been certified for the KE69xx?
+[End]
+
+[Key Word:]
+Credibility:3
+certified
+switches
+KE69xx
+ke69xx
+[End]
+
+[Ans:]
+We have tested the following switches.
+CISCO   Catalyst 2960X
+CISCO Catalyst 2960XR
+CISCO   Catalyst 3750
+HP      Procurve 2920
+H3C     S5120
+Huawei  S5700
+[End]
+
+[Intent:]
+intentQ3
+What is the KE69x0's maximum distance in extender mode?
+What is the maximum distance in extender mode for the KE69x0?
+What is the maximum distance in extender mode with KE69x0?
+[End]
+
+[Key Word:]
+Credibility:2
+maximum distance
+extender
+KE69x0
+[End]
+
+[Ans:]
+KE69x0 can reach up to 100m in extender mode (This is a direct point-to-point connection).
+[End]
+
+
+[Intent:]
+intentQ4
+The receiver screen keeps dropping the signal and the resolution isn't registering.
+The receiver screen keeps dropping the signal.
+The resolution of the receiver isn't registering.
+[End]
+
+[Key Word:]
+Credibility:2
+dropping
+resolution
+receiver
+[End]
+
+[Ans:]
+Change the EDID mode on the transmitter to Manual(see the attached illustration),
+then press the EDID button to acquire your monitor's EDID rather than ATEN's default
+setting.
+[End]
+
+[Intent:]
+intentQ5
+How can Matrix Mgr Lite R2 select 8 * TX/RX?
+How can Matrix Mgr Lite R2 select 8 x TX/RX?
+How to select 8 * TX/RX in Matrix Mgr Lite R2?
+[End]
+
+[Key Word:]
+Credibility:2
+Matrix Mgr Lite R2
+8 * TX/RX
+8 x TX/RX
+[End]
+
+[Ans:]
+Matrix Mgr Lite R2 selects TX/RX randomly.  (first come, first serve)  Users can 
+remove and add-in TX/RX to decide which 8 * TX/RX are selected.
+[End]
+
+[Intent:]
+intentQ6
+Maximum limited bandwidth of unit
+KE6900's maximum limited bandwidth
+Maximum limited bandwidth of the KE6900
+[End]
+
+[Key Word:]
+Credibility:1
+limited bandwidth
+Maximum limited bandwidth
+maximum limited bandwidth
+[End]
+
+[Ans:]
+The maximum limitation bandwidth is 500Mbps. 
+It may be set by using the RS-232 command found on page 182 of 
+the KE6900's user manual.The options are Unlimited, 10, 20, 
+50, 100, 200, 500.
+[End]
+
+[Intent:]
+intentQ7
+Video compressing format
+Video compressing quality
+KE6900 video quality
+[End]
+
+[Key Word:]
+Credibility:1
+video quality
+format
+quality
+[End]
+
+[Ans:]
+Yes, KE6900 and KE6940 both use lossless compression 
+in video transmission.
+[End]
+
+[Intent:]
+intentQ8
+What is the purpose of buttons labeled "Graphics" and "Video" on the front panel of the KE6900 and 6940?
+What is the purpose of buttons labeled "Graphics" and "Video" at the KE6900 and 6940?
+What is the purpose of buttons labeled "Graphics" and "Video" ?
+[End]
+
+[Key Word:]
+Credibility:3
+buttons labeled
+Graphics
+Video
+[End]
+
+[Ans:]
+The 'Graphics' button is used for transmitting text or still image, but the 'Video' button 
+is used to transmit moving picture, for example, watching a video clip from a computer.
+[End]
+
+[Intent:]
+intentQ9
+Can I access KE6900ST by web interface, or remote client software?
+How do I access KE6900ST from web interface?
+May I access KE6900ST by web interface, or remote client software?
+[End]
+
+[Key Word:]
+Credibility:3
+access
+access KE6900ST
+web interface
+remote client
+[End]
+
+[Ans:]
+There are three different methods to access the KE6900ST.
+1.Via a network; use a browser to log in to KE6900ST or use a utility 
+  supporting Telnet. Any utility supporting Telnet or Microsoft Command
+  Prompt will work.
+2.KE6900ST comes equipped with a serial connection; so any serial 
+  communications utilitycan be used to access the unit the protocols 
+  and commands are provided in the unit's manual.
+3.The unit also provides an OSD, so users can connect to the unit 
+  with a keyboard, mouse and monitorfor local access.
+[End]
+
+[Intent:]
+intentQ10
+What is the maximum resolution?
+What is the maximum resolution for KE6900ST?
+What is the maximum resolution supported by the KE6900ST?
+[End]
+
+[Key Word:]
+Credibility:1
+maximum resolution
+[End]
+
+[Ans:]
+The maximum resolution is 1920x1200 @ 60 Hz.
+[End]
+
+[Intent:]
+intentQ11
+What is the maximum distance to which the KE6900ST may be extended?
+How long can the KE6900ST extend?
+How far can the KE6900ST extend?
+[End]
+
+[Key Word:]
+Credibility:2
+KE6900ST extend
+KE6900ST
+extend
+distance
+How long
+How far
+[End]
+
+[Ans:]
+Using a point-to-point connection (straight connection no network hubs or switches between)
+, the KE6900ST can be extended up to 100M.With a Gigabit network switch or hub, the 
+extension is only limited by the network devices to which the KE6900ST is attached
+Note: A multiple tier application maybe required, depending on the ability of the 
+network components
+[End]
+
+[Intent:]
+intentQ12
+Can more than one KE6900ST connect to one receiver ?
+How many KE6900ST can connect to one receiver ?
+Can one receiver connect to  more than one KE6900ST ?
+[End]
+
+[Key Word:]
+Credibility:3
+connect
+KE6900ST
+receiver
+[End]
+
+[Ans:]
+No, KE6900ST works the same way as KE6900 allowing one transmitter to connect to
+one or more receivers.
+[End]
+
+[Intent:]
+intentQ13
+Does KE6900ST carry any data protection while transmitting?
+Has KE6900ST carry data protection while transmitting?
+Does the KE6900ST have data protection when it is transmitted?
+[End]
+
+[Key Word:]
+Credibility:3
+protect
+KE6900ST
+transmitting
+transmitted
+[End]
+
+[Ans:]
+Yes, for data transmission, KE6900ST is encrypted with AES and TLS.
+[End]
+
+[Intent:]
+intentQ14
+What specifications should be included in a network switch or router for use with the KE69xx?
+How to choice the network switch or the router for use with the KE69xx?  
+What specifications should be included in a network switch or router to support for the KE69xx?
+[End]
+
+[Key Word:]
+Credibility:2
+network switch
+router
+specification
+choice
+[End]
+
+[Ans:]
+For best results, we recommend a Giga LAN network switch or a router with IGMP functionality.
+For detailed requirement, please see the criteria below.Dedicated Non-Blocking switch is 
+preferred in order to prevent congestion from one switch to another when interconnection is 
+needed or applied.Gigabit (1000 Mbps) or faster Ethernet ports is recommended Support IGMP v2 
+or v3 snooping (Multicast) Supports IGMP Querier Multicast routing switch is needed for 
+different IP segments High bandwidth connections between switches, preferably by fiber channel
+Check the throughput of the switch and ensure the up and downstream data speed of each port 
+is 1 Gigabit per second Using switches from the same manufacturers throughout the entire 
+installation to meet the best compatibility and to prevent the incompatibility, if possible
+[End]
+
+[Intent:]
+intentQ15
+Can we use PS/2 keyboard or mouse on KE6900?
+Dose the KE6900 support PS/2 keyboard or mouse?
+Can the KE6900 use PS/2 keyboard or mouse?
+[End]
+
+[Key Word:]
+Credibility:3
+KE6900
+ke6900
+PS/2
+keyboard
+mouse
+[End]
+
+[Ans:]
+Yes, ATEN carries a PS/2 to USB converter called UC10KM for this type of application. 
+For details, please check out the website 
+http://www.aten.com/global/en/products/kvm/kvm-modules-&-accessories/uc10km/#.WP1oR0V96Uk 
+[End]
+
+[Intent:]
+intentQ16
+Is there anyway to disable the login process?
+Can I disable the login process?
+How to disable the login process?
+[End]
+
+[Key Word:]
+Credibility:2
+login process
+disable
+[End]
+
+[Ans:]
+The KE6900 has no provisions to disable the login requirements
+[End]
+
+[Intent:]
+intentQ17
+Will the KE69xx work with a KE89xx?
+Can the KE69xx work with a KE89xx?
+Dose the KE69xx work with a KE89xx?
+[End]
+
+[Key Word:]
+Credibility:3
+work with
+KE69xx
+KE89xx
+ke69xx
+ke89xx
+[End]
+
+[Ans:]
+Yes, the KE69xx will work with the KE89xx Transmitter and Receiver.
+[End]
+
+[Intent:]
+intentQ18
+KE6900R shows a distorted screen, but the OSD looks fine.
+Why does KE6900R show a distorted screen, but the OSD looks fine?
+The OSD looks fine, but KE6900R shows a distorted screen.
+[End]
+
+[Key Word:]
+Credibility:3
+OSD
+KE6900R
+distorted screen
+[End]
+
+[Ans:]
+Please make sure  the KE6900T and KE6900R use the same firmware version.
+[End]
+
+[Intent:]
+intentQ19
+What if I need fiber transmission?
+How do I use fiber transmission at KE6900?
+If I need fiber transmission,how to do?
+[End]
+
+[Key Word:]
+Credibility:1
+fiber transmission
+[End]
+
+[Ans:]
+The KE dedicated LAN port is able to convert UTP to fiber via RJ45 
+to fiber box (Gigabit Media Converter)
+[End]
+
+[Intent:]
+intentQ20
+How many USB devices can be supported on KE6900ST?
+How many USB devices can be used on KE6900ST?
+How many USBs can I use on KE6900ST?
+[End]
+
+[Key Word:]
+Credibility:2
+KE6900ST
+USB device
+USBs
+[End]
+
+[Ans:]
+KE6900ST can support maximum 6 USB devices.
+[End]
+
+[Intent:]
+intentQ21
+Can I integrate KE with 3rd party control device?
+Can I integrate 3rd party control device with KE?
+Can I use 3rd party control device with KE?
+Can I control KE by RS232?
+[End]
+
+[Key Word:]
+Credibility:2
+KE
+ke
+control device
+RS232
+rs232
+[End]
+
+[Ans:]
+Yes, KE accepts the commands via Serial, Telent or TCP/IP 
+with user/password protection.
+[End]
+
+[Intent:]
+intentQ22
+What are the differences between the KE8950 and KE8952?
+What is the difference between KE8950 and KE8952?
+Where is the KE8950 and KE8952 different?
+[End]
+
+[Key Word:]
+Credibility:3
+differen
+KE8950
+KE8952
+ke8950
+ke8952
+[End]
+
+[Ans:]
+The KE8952 supports Power over Ethernet (PoE) 
+in compliance with the IEEE 802.3at and IEEE 802.3af standards
+[End]
+
+[Intent:]
+intentQ23
+I can view and control PC from KE6900T but can only view and cannot control from KE6900R. Am I doing something stupid?
+I need to able control connected PC from both KE6900T and KE6900R, what should I do?
+When I connect keyboard and mouse to KE6900R, they can work but I cannot invoke OSD, what can be wrong?
+The keyboard and mouse of the KE6900R can work but I cannot invoke OSD, what can be wrong?
+Can I connect keyboard or mouse to USB peripheral port of KE6900R?
+What is the function of KE6900T 'Function switch'?
+[End]
+
+[Key Word:]
+Credibility:2
+KE6900T
+KE6900R
+connect
+control
+Function switch
+OSD
+[End]
+
+[Ans:]
+Please have a look the switch which is on the rear of transmitter.
+If the switch is located on Local, the control from receiver will be locked.
+In this situation, please set the switch to 'Auto' mode for making sure
+both transmitter and receiver can make control.
+Otherwise, there are icons next to the USB port for recognising keyboard and mouse.
+The keyboard and mouse should be installed in the related port.
+Please refer to user manual page 9
+[End]
+
+[Intent:]
+intentQ24
+What if we use 3rd party SFP? Like MGB-L50 on KE8950?
+Can we use 3rd party GBIC HPE J4859C on KE8950?
+Can we use 3rd party SFP Mikrotik SM 1310nm on KE8950?
+What are the benefit of using ATEN 2A-136G/2A-137G?
+2A-136G/2A-137G are over price and can I use SFP dongle from market?
+[End]
+
+[Key Word:]
+Credibility:2
+KE8950
+KE8952
+2A-136G
+2A-137G
+ATEN
+3rd party SFP
+3rd party GBIC HPE
+SFP dongle
+[End]
+
+[Ans:]
+KE8950/KE8952 are verified and can work properly with ATEN 2A-136G/2A-137G.
+They are sold as a device and being fully verified.
+We did not test on another SFP and we did not know
+if another SFP can properly work with KE8950/KE8952.
+[End]
+
+[Intent:]
+intentQ25
+What is default account and password of KE6900/KE8950?
+I tried account 'admin' without password but I cannot login KE6900, what can be the problem?
+I tried account: 'administrator' with password '1234' and unable to login KE6900, what are correct account and password?
+I cannot login KE6900 by telnet, what can be the problem?
+I am using control system and trying to control KE6900 by RS232, but it cannot work?
+[End]
+
+[Key Word:]
+Credibility:2
+KE6900
+KE8950
+account
+password
+login
+control
+[End]
+
+[Ans:]
+Please try default account 'administrator', password 'password' and check again.
+[End]
+
+[Intent:]
+intentQ26
+Some of monitors seconds lagging on display when switching Tvwall profiles.
+My CCKM GUI is not the same as states in your user manual.
+I can set CCKM logout timeout but it cannot save.
+I cannot login CCKM as it service cannot start.  I check and on 'Service', KeManager service is always down.
+After I install CCKM, I cannot open its web page?
+[End]
+
+[Key Word:]
+Credibility:2
+CCKM
+CCKM GUI
+logout
+login
+web page
+switching Tvwall
+switch Tvwall
+lagging
+[End]
+
+[Ans:]
+Please upgrade to latest CCKM and Java version.
+[End]
+
+[Intent:]
+intentQ27
+Can we use gaming keyboard HyperX Alloy Elite RGB to KE6900R/KE6940R?
+I have Corsair K95 RGB Platinum keyboard and it cannot work when connect to KE6900R/KE6940R?
+Can I use Bluetooth keyboard/mouse to KE6900R/KE6940R?
+We have multiple KE6900 but some of no brand wireless keyboard/mouse cannot work properly, it is the limitation? No brand keyboard/mouse work fines when directly connect to PC.
+My client is asking if Razer Huntsman Elite can work with KE6900R/KE6940R?
+[End]
+
+[Key Word:]
+Credibility:2
+KE6900
+KE6900R
+KE6940R
+gaming keyboard
+Bluetooth keyboard
+Bluetooth mouse
+wireless keyboard
+wireless mouse
+Razer Huntsman Elite
+[End]
+
+[Ans:]
+Most gaming keyboard/mouse requires power much more than regular keyboard/mouse,
+we suggest adding a powered USB Hub between the KE6900R/KE6940R and the Keyboard. 
+And Bluetooth keyboard/mouse cannot work on KE6900 since they do not have receiver
+dongle to connect to KE6900. We suggest using keyboard/mouse from Microsoft or
+Logitech for better compatibility. 
+[End]
+
+[Intent:]
+intentQ28
+Some of the monitors are showing messages regarding resolution and we would like to eliminate this to happen. We already updated the firmware for both Transmitters and Receivers but still the problem exists.
+Through KE6900 the EDID is not the one of connected monitors, how can I do?
+I have a particular monitor and cannot properly display when connecting to KE6900, please let me know your suggestion.
+What is the purpose for Manual EDID?
+How to adopt Manual EDID in CCKM? Can you provide steps?
+[End]
+
+[Key Word:]
+Credibility:2
+EDID
+CCKM
+KE6900
+Manual EDID
+connect
+monitor
+eliminate
+[End]
+
+[Ans:]
+Please select Manual EDID on CCKM and the issue can able to fix: when selecting Manual EDID, 
+KE6900 adopts real EDID from connected monitor and can eliminate EDID related issue. 
+[End]
+
+[Intent:]
+intentQ29
+How can I control KE6900 from external control system?
+Can I control CCKM from RS232?
+Can I use ATEN VK2100 to control KE6900?
+I have Crestron control system, can I connect the control system to CCKM for controlling?
+Can I use serial console likes hyper terminal or Putty to control CCKM?
+[End]
+
+[Key Word:]
+Credibility:2
+external control
+control
+CCKM
+KE6900
+VK2100
+RS232
+serial console
+[End]
+
+[Ans:]
+KE6900 supports RS232 and Telnet control.  For RS232 control, please connect your 
+RS232 cable to any KE6900R; for Telnet, you can just login any KE6900R for the control. 
+Please note KE6900 should be in Matrix mode for external control.
+For more detail, please refer to attachment and user manual from page 17 
+[End]
+
+[Intent:]
+intentQ30
+How can I use KE6900T and KE6900R for RS232 communication?
+Can I connect RS232 touch screen to KE6900R and control the PC?
+How can I verify serial channel functionality of KE6900?
+I use RS232 cable to connect KE6900T COM port to my PC, and another RS232 cable to my barcode scanner and it cannot work, what could be the problem?
+Can I connect a switch console port to KE6900R COM port, and control the switch from PC connecting to KE6900T?
+[End]
+
+[Key Word:]
+Credibility:2
+KE6900
+connect
+COM port
+serial channel
+RS232
+serial console
+[End]
+
+[Ans:]
+Please refer to attachment for RS232 communication wiring and loopback test scenario.
+[End]
+
+[Intent:]
+intentQ31
+The default password was password.  We changed it but cannot logon with the new password. What are the steps to reset the password on the unit? 
+I forget the password of my KE6900, how to revert it to default value?
+We tried the reset button to reset to factory defaults but it looks like this does not apply to the password.
+My colleague must have modified the password of KE6900 but he quits now and I cannot find him, can I reset the units back to default?
+Does 'Reset to default' in CCKM also apply to password?
+[End]
+
+[Key Word:]
+Credibility:2
+default password
+changed
+reset password
+reset
+default
+password
+KE6900R
+CCKM
+[End]
+
+[Ans:]
+No, to reset password to default, please refer to below:
+1. Un-screw and open the case.
+2. Find the jumper pin. There a line 'Default Password' printed on the board.
+3. Attach the jumper on it, power the unit on then wait for 1 minute.
+4. Power-off the unit and remove the jumper. The password should be reset to 'password' now.
+[End]
+
+[Intent:]
+intentQ32
+Does KE6900/KE6940 support Matrix feature (Multi-to Multi) without KE management software?
+Can I use KE6900/KE6940 extender mode without using CCKM?
+What if I install multiple KE6900 on Matrix mode without KE manager?
+Can I send command to a KE6900R which is in extender mode to control it?
+What is the default mode of KE6900?  Extender or Matrix mode?
+[End]
+
+[Key Word:]
+Credibility:2
+Matrix
+Extender
+KE6900
+KE6940
+extender mode
+matrix
+KE6900R
+CCKM
+[End]
+
+[Ans:]
+To operate Matrix feature, you will need to have Matrix Manager installed,
+otherwise the system will keep looking for KE management software.
+Telnet or RS232 command is only available when KE is in Matrix mode.
+[End]
+
+[Intent:]
+intentQ33
+What is the maximum distance between KE69X0 Transmitter and Receiver?
+Can I use a 150m Category 6A cable for connecting KE6900T to KE6900R?
+What is the maximum distance between KE Tx and KE Rx when they are connecting to switch?
+Is there any difference of maximum distance when KE in extender and matrix mode?
+[End]
+
+[Key Word:]
+Credibility:2
+KE
+distance
+Category
+cable
+[End]
+
+[Ans:]
+KE is an over-IP extender and it follows TCP/IP limitation on cable length of 100m peer
+to peer in extender mode. When connecting to a network switch, then up to 200m(100m each end)
+can be extended.
+[End]
+
+[Intent:]
+intentQ34
+I cannot use my USB speaker and microphone over KE69xx, do you support these devices?
+Can I use USB touch screen on KE?
+I install a USB fingerprint reader on KE but it cannot work, is it a limitation?
+Do you have a list of tested/supported USB devices for KE?
+Can KE support USB devices which are asynchronous mode?
+[End]
+
+[Key Word:]
+Credibility:2
+KE
+USB
+speaker
+microphone
+touch screen
+fingerprint reader
+asynchronous mode
+asynchronous
+[End]
+
+[Ans:]
+We have tested KE and it supports USB Mass Storage, USB Smart Card Reader,
+USB Printer, USB Scanner, USB Game Controller, USB KB, USB MS, USB Touch Screen,
+USB Pen Tablet/Sign Pad, Apple iPOD.
+KE may not support some of USB asynchronous mode devices:
+such as USB Fingerprint Reader，USB Speaker.
+In case of incompatible USB device encountered, we need to fix the problem case by case.
+[End]
+
+[Intent:]
+intentQ35
+Are there any bandwidth usage differences between Picture and Video modes?
+Do you have a list of bandwidth consumption from different resolution?
+Do you have suggest switch model for KE in matrix mode?
+What is the requirement for bandwidth for KE in matrix mode?
+[End]
+
+[Key Word:]
+Credibility:2
+bandwidth
+Picture
+Video
+resolution
+switch model
+KE
+[End]
+
+[Ans:]
+Picture mode uses considerably less bandwidth compared to Video mode
+because picture mode is transmitted frame by frame, while video mode is transmitted
+by picture group.
+Please refer to attachment for our suggestion on bandwidth and switches.
+[End]
+
+[Intent:]
+intentQ36
+May the KE6900ST be managed by CCKM (KE Management Software)?
+I have Bluestream video IP extenders; can I add ATEN KE to my control?
+Currently I have numerous ATEN KE6900 installed and can I add KE6900ST?
+I have 10 KE6900Tx and KE6900Rx, do I need to purchase license key to manage them?
+How many KE can I add in a CCKM if I do not want to buy license?
+[End]
+
+[Key Word:]
+Credibility:2
+KE
+managed
+manage
+control
+license
+[End]
+
+[Ans:]
+KE6900ST is designed to be managed by CCKM (KE Management Software).
+NOTE:The CCKM version must be v1.4.138 or above.
+For license, we provide free license for KE nodes less than (included) 8.
+If your KE are more than 8 then you need to purchase license for matrix
+mode management.
+[End]
+
+[Intent:]
+intentQ37
+I connect a Blu-Ray player to KE6900 but cannot have display?
+May I know if KE6900 supports HDCP?
+Do you know KE89xx supports HDCP or not?
+I connect a media player to KE6900 but cannot work, do you have any suggestion?
+I know KE6900 does not support HDCP, how can I bypass HDCP and let it display?
+[End]
+
+[Key Word:]
+Credibility:2
+KE
+HDCP
+Blu-Ray
+media player
+[End]
+
+[Ans:]
+The Blu-Ray player "Full HD" video requires HDCP to work, but KE6900 does not support HDCP.
+For HDCP content, we suggest KE89xx as it supports HDCP.
+And we do not recommend HDCP Bypass device as it may render legal issue.
+[End]
+
+[Intent:]
+intentQ38
+Does the KE8950 and KE8952 support multi mode fiber?
+What kind of SFP module KE89xx support?
+Can I use LC Duplex mode cable on KE89xx?
+What is your suggestion for fiber module used on KE89xx?
+I purchase SFP from Taobao and install them on KE89xx but they cannot work, what can I do?
+[End]
+
+[Key Word:]
+Credibility:2
+KE
+multi mode
+SFP
+fiber
+LC Duplex
+[End]
+
+[Ans:]
+The KE8950 and KE8952 both support single mode and multi mode fiber.
+We strongly suggest you purchase 2A-136G and 2A-137G for KE89xx SFP utilization.
+[End]
+
+[Intent:]
+intentQ39
+I am unable to start the CCKM service?
+I install CCKM v2.1.202 but I cannot login its web from http://localhost?
+What can I do if I get error message 'insufficient privilege' popup when I try to install CCKM?
+When installing CCKM service, the error message 'Windows error 2 occurred while loading the Java VM popped up ?
+I have another web server installed which it occupies port 8443, what can I do if I want to install CCKM in the PC as well?
+[End]
+
+[Key Word:]
+Credibility:2
+CCKM
+service
+login
+insufficient privilege
+error message
+web server
+[End]
+
+[Ans:]
+The CCKM service may be blocked by an OS firewall or antivirus software,
+please try to temporarily disable them first and please use administrator
+privilege to reinstall CCKM then observe.
+CCKM default web address is https://localhost:8443 and if it occupied,
+please modify the port number during CCKM installation.
+'Windows error 2' message is most likely caused by an incorrect Java path.
+[End]
+
+[Intent:]
+intentQ40
+Can I install CCKM on my Windows server 2012?
+I try to install CCKM on my Linux server but cannot complete, what can I do?
+Do I need to install Java first before install CCKM?
+I install CCKM on a Windows 2016 server but it cannot work?
+Do you have a SOP for installing CCKM on Linux?
+[End]
+
+[Key Word:]
+Credibility:2
+CCKM
+Windows server
+windows server
+Linux server
+linux server
+install java
+install Java
+Windows
+server
+SOP
+[End]
+
+[Ans:]
+We have tested and confirmed that CCKM can be installed on Windows server version 2012,
+2012R2, and 2016. For CCKM install on Linux, please refer to attachment.
+[End]
