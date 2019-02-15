@@ -613,9 +613,9 @@ if __name__ == '__main__':
                 pointList.append(point)
 
             indexAns = 0
-            for i, p in enumerate(pointList, 1):
+            for k, p in enumerate(pointList, 1):
                 if (p > pointList[indexAns]):
-                    indexAns = i - 1
+                    indexAns = k - 1
             # ------------------------------------------------------------------------------
 
             print('Dr_Answer: %s' %(anslist[1][indexAns]))
