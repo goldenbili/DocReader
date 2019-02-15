@@ -83,15 +83,8 @@ class Predictor(object):
         logger.info('Initializing tokenizer...')
         annotators = get_annotators_for_model(self.model)
 
-        if num_workers is None or num_workers > 0:
-            self.workers = ProcessPool(
-                num_workers,
-                initializer=init,
-                initargs=({'annotators': annotators},),
-            )
-        else:
-            self.workers = None
-            self.tokenizer = SpacyTokenizer(annotators=annotators)
+        self.workers = None
+        self.tokenizer = SpacyTokenizer(annotators=annotators)
 
     # prerun steps for simplePredict
     def pre(self, document):
