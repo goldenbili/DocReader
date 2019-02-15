@@ -81,7 +81,7 @@ The components of Rear View of KE8952R are as follow: Grounding Terminal is the 
 Since the KE69X0 uses standard IP protocols to transfer media and data, in theory there are no distance limitations, however, there are limitations inherent with network devices(hubs, switches, routers, etc.),
 bandwidth considerations,and network device settings (IGMP).
 
-We have tested the following switches: CISCO Catalyst 2960X, CISCO Catalyst 2960XR, CISCO Catalyst 3750, HP Procurve 2920, H3C    S5120, Huawei S5700.
+We have tested the following switches: CISCO Catalyst 2960X, CISCO Catalyst 2960XR, CISCO Catalyst 3750, HP Procurve 2920, H3C S5120, Huawei S5700.
 
 KE69x0 can reach up to 100m in extender mode (This is a direct point-to-point connection).
 
@@ -97,7 +97,7 @@ The 'Graphics' button and the 'Video' button use different image compressions de
 
 There are three different methods to access the KE6900ST: First, Via a network; use a browser to log in to KE6900ST or use a utility supporting Telnet ; Any utility supporting Telnet or Microsoft Command Prompt will work; Second , KE6900ST comes equipped with a serial connection; so any serial communications utilitycan be used to access the unit the protocols and commands are provided in the unit's manual; Third ,  The unit also provides an OSD, so users can connect to the unit with a keyboard, mouse and monitorfor local access.
 
-The maximum resolution is 1920x1200 @ 60 Hz.
+The maximum video resolution is 1920x1200 @ 60 Hz.
 
 Using a point-to-point connection (straight connection no network hubs or switches between) , the KE6900ST can be extended up to 100M. With a Gigabit network switch or hub, the extension is only limited by the network devices to which the KE6900ST is attached Note: A multiple tier application maybe required, depending on the ability of the network components.
 
@@ -123,7 +123,7 @@ Yes, KE accepts the commands via Serial, Telent or TCP/IP with user/password pro
 
 The KE8952 supports Power over Ethernet (PoE) in compliance with the IEEE 802.3at and IEEE 802.3af standards.
 
-Please have a look the switch which is on the rear of transmitter. The purpose of the function switch is to set the permission of the unit (transmitter and receiver). If the switch is located on Local, the control from receiver will be locked. In this situation, please set the switch to 'Auto' mode for making sure both transmitter and receiver can make control. Otherwise, there are icons next to the USB port for recognising keyboard and mouse. The keyboard and mouse should be installed in the related port, please refer to user manual page 9.
+Please have a look the switch which is on the rear of transmitter. The purpose of the function switch is to set the permission of the unit . If the switch is located on Local, the control from receiver will be locked. In this situation, please set the switch to 'Auto' mode for making sure both transmitter and receiver can make control. Otherwise, there are icons next to the USB port for recognising keyboard and mouse. The keyboard and mouse should be installed in the related port, please refer to user manual page 9.
 
 KE8950/KE8952 are verified and can work properly with ATEN 2A-136G/2A-137G. They are sold as a device and being fully verified. We did not test on another SFP and we did not know if another SFP can properly work with KE8950/KE8952.
 
