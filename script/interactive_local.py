@@ -601,7 +601,7 @@ if __name__ == '__main__':
 
             quesToken = myMessage.lower().split(' ')
             pointList = []
-            for i, ans in enumerate(anslist[0], 1):
+            for m, ans in enumerate(anslist[0], 1):
                 point = 0
                 ans_low = ans.lower()
                 for quesOneWord in enumerate(quesToken, 1):
