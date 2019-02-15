@@ -2,17 +2,7 @@ import sys
 
 sys.path.append('.')
 
-import tornado
-import tornado.web
-import tornado.ioloop
-import tornado.httpserver
-import tornado.options
-import tornado.web
-import tornado.gen
-import tornadoredis
-from tornado.escape import json_encode
 
-from socket import *
 import sys
 import threading
 from time import localtime
@@ -36,7 +26,6 @@ import code
 import argparse
 import logging
 import prettytable
-import time
 import json
 import os
 import imp
@@ -45,15 +34,6 @@ import re
 from predictor import Predictor
 from multiprocessing import cpu_count
 
-roomchannel = str('1')
-
-if sys.version[0] == '2':
-    imp.reload(sys)
-    sys.setdefaultencoding("utf-8")
-
-HOST = '127.0.0.3'
-PORT = 8555  # 设置侦听端口
-BUFSIZ = 1024
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -558,211 +538,6 @@ banner = """
 
 def usage():
     print(banner)
-
-
-class TcpServer():
-    def __init__(self, no_readintent):
-        self.ADDR = (HOST, PORT)
-        try:
-            self.STOP_CHAT = False
-            self.sock = socket(AF_INET, SOCK_STREAM)
-            print('%d is open' % PORT)
-
-            self.sock.bind(self.ADDR)
-            self.sock.listen(5)
-            # 设置退出条件
-
-            # 所有监听的客户端
-            self.clients = {}
-            self.thrs = {}
-            self.stops = []
-
-            # add from willy20190122
-            self.no_readintent = no_readintent
-
-        except Exception as e:
-            print("%d is down" % PORT)
-            return None
-
-    def IsOpen(ip, port):
-
-        s = socket(AF_INET, SOCK_STREAM)
-        try:
-            s.connect((ip, int(port)))
-            # s.shutdown(2)
-            # 利用shutdown()函数使socket双向数据传输变为单向数据传输。shutdown()需要一个单独的参数，
-            # 该参数表示s了如何关闭socket。具体为：0表示禁止将来读；1表示禁止将来写；2表示禁止将来读和写。
-            print('%d is open' % port)
-            return True
-        except:
-            print('%d is down' % port)
-            return False
-
-    def listen_client(self):
-        while not self.STOP_CHAT:
-            print(u'等待接入，侦听端口:%d' % (PORT))
-            self.tcpClientSock, self.addr = self.sock.accept()
-            print(u'接受连接，客户端地址：', self.addr)
-            address = self.addr
-            # 将建立的client socket链接放到列表self.clients中
-            self.clients[address] = self.tcpClientSock
-            # 分别将每个建立的链接放入进程中，接收且分发消息
-            self.thrs[address] = threading.Thread(target=self.readmsg, args=[address])
-            self.thrs[address].start()
-            time.sleep(0.5)
-
-        sys.exit(0)
-
-    def TornadoSend(self, people, answer):
-        data = json_encode({'name': people, 'msg': answer})
-        c2 = tornadoredis.Client()
-        r2 = tornado.web.RequestHandler
-        r2.prepare(r2)
-        c2.publish(roomchannel, data)
-        c2.disconnect()
-        time.sleep(0.5)
-
-    def readonemsg(self, ques):
-
-        anslist = process(ques, True, candidates=None, top_n=3)
-
-        # do 1a2b
-        # ------------------------------------------------------------------------------
-        myMessage = replaceMultiple(ques, Apotoken, '')
-
-        quesToken = myMessage.lower().split(' ')
-        pointList = []
-        for i, ans in enumerate(anslist[0], 1):
-            point = 0
-            ans_low = ans.lower()
-            for quesOneWord in enumerate(quesToken, 1):
-                if quesOneWord[1] != '':
-                    tokenIndex = [m.start() for m in re.finditer(quesOneWord[1], ans_low)]
-                    if (len(tokenIndex) != 0 and quesOneWord[1] not in STOPWORDS and quesOneWord[1] != 'device' and
-                            quesOneWord[1] != 'use'):
-                        point = point + 1
-            pointList.append(point)
-
-        indexAns = 0
-        for i, p in enumerate(pointList, 1):
-            if (p > pointList[indexAns]):
-                indexAns = i - 1
-        # ------------------------------------------------------------------------------
-
-        self.TornadoSend('Dr_Answer', anslist[1][indexAns])
-        self.TornadoSend('Dr_QA', anslist[0][indexAns])
-
-    def readmsg(self, address):
-        # 如果地址不存在，则返回False
-        if address not in self.clients:
-            return False
-        # 得到发送消息的client socket
-        client = self.clients[address]
-        while True:
-            try:
-                # 获取到消息内容data
-                data = client.recv(BUFSIZ)
-            except:
-                print(error)
-                self.close_client(address)
-                break
-            if not data:
-                break
-
-            # python3使用bytes，所以要进行编码
-            # s='%s发送给我的信息是:[%s] %s' %(addr[0],ctime(), data.decode('utf8'))
-            # 对日期进行一下格式化
-            ISOTIMEFORMAT = '%Y-%m-%d %X'
-            stime = time.strftime(ISOTIMEFORMAT, localtime())
-            print([stime], ':', data.decode('utf8'))
-
-            # 如果输入quit(忽略大小写),则程序退出
-            STOP_CHAT = (data.decode('utf8').upper() == "QUIT")
-            if STOP_CHAT:
-                print("quit")
-                self.close_client(address)
-                print("already quit")
-                break
-
-            if not self.no_readintent:
-                READ_INTENT = (data.decode('utf8').upper() == "READ INTENT")
-                READ_MY_QUESTION = (data.decode('utf8').upper() == "READ MY QUESTION")
-                if READ_INTENT:
-                    fp = open('QA_database.txt', "r")
-                    intent_list = read_all_intent(fp)
-                    for i in range(len(intent_list)):
-                        Sintent_idx = '========================(intentQ' + str(i + 1) + ')========================'
-                        self.TornadoSend('I_Want_Ask', Sintent_idx)
-                        for j, ques in enumerate(intent_list[i]):
-                            print('question %d - %d : %s' %(i, j, ques))
-                            self.TornadoSend('I_Want_Ask', ques)
-                            self.readonemsg(ques)
-                    self.TornadoSend('I_Want_Ask', 'DataSet is finish')
-                elif READ_MY_QUESTION:
-                    fp = open('My_QA_database.txt', "r")
-                    ques = fp.readline().stripe()
-                    while ques:
-                        print('question: %s'%(ques))
-                        self.readonemsg(ques)
-                        ques = fp.readline().stripe()
-                    self.TornadoSend('I_Want_Ask', 'DataSet is finish')
-                else:
-                    myMessage = data.decode('utf8')
-                    print('question: %s' % (myMessage))
-                    self.readonemsg(myMessage)
-            else:
-                myMessage = data.decode('utf8')
-                print('question: %s' % (myMessage))
-                self.readonemsg(myMessage)
-
-            '''
-            anslist = process(myMessage, True, candidates=None, top_n=3)
-
-            # do 1a2b
-            myMessage = replaceMultiple(myMessage , Apotoken, '')
-            quesToken = myMessage.split(' ')
-            pointList = []
-            for i, ans in enumerate(anslist[0], 1):
-                point = 0
-                for quesOneWord in enumerate(quesToken, 1):
-                    if quesOneWord[1] != '' :
-                        tokenIndex = [m.start() for m in re.finditer(quesOneWord[1], ans)]
-                        if(len(tokenIndex)!=0 and quesOneWord[1] not in STOPWORDS and quesOneWord[1]!='device' and quesOneWord[1]!='use'):
-                            point = point + 1
-                pointList.append(point)
-            indexAns = 0
-            for i, p in enumerate(pointList, 1):
-                if(p > pointList[indexAns]):
-                    indexAns = i-1
-
-                data = json_encode({'name': 'Dr_Answer', 'msg': anslist[1][indexAns]})
-                c2 = tornadoredis.Client()
-                r2 = tornado.web.RequestHandler
-                r2.prepare(r2)
-                c2.publish(roomchannel, data)
-                c2.disconnect()
-                time.sleep (0.5)
-
-                data = json_encode({'name': 'Dr_QA', 'msg': anslist[0][indexAns]})
-                c2 = tornadoredis.Client()
-                r2 = tornado.web.RequestHandler
-                r2.prepare(r2)
-                c2.publish(roomchannel, data)
-                c2.disconnect()
-                time.sleep(0.5)
-            '''
-
-    def close_client(self, address):
-        try:
-            client = self.clients.pop(address)
-            self.stops.append(address)
-            client.close()
-            for k in self.clients:
-                self.clients[k].send(str(address) + u"已经离开了")
-        except:
-            pass
-        print(str(address) + u'已经退出')
-
 
 # ------------------------------------------------------------------------------
 # Commandline arguments & init
