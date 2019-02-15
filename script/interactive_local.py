@@ -3,7 +3,6 @@ import sys
 sys.path.append('.')
 
 
-import sys
 import threading
 from time import localtime
 import time
@@ -33,6 +32,10 @@ import re
 
 from predictor import Predictor
 from multiprocessing import cpu_count
+
+import nltk
+import nltk.data
+nltk.download('punkt')
 
 
 logger = logging.getLogger()
