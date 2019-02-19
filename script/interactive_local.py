@@ -620,7 +620,8 @@ if __name__ == '__main__':
 
             print('Dr_Answer: %s' %(anslist[1][indexAns]))
             print('Dr_QA: %s' %(anslist[0][indexAns]))
-        print('DataSet is finish')
+            
+    print('DataSet is finish')
     '''
     file = open("Output1.txt", "r")
     document = file.read()
