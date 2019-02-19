@@ -9,7 +9,7 @@ import time
 
 import torch
 import torch._utils
-STOPWORDS_ATEN = frozenset(['device','use','KE6900','ke6940','ke8950','ke8952','ke69xx','ke89xx','work','purpose'])
+STOPWORDS_ATEN = frozenset(['device','use','KE6900','ke6940','ke8950','ke8952','ke69xx','ke89xx','work','purpose','cannot'])
 
 try:
     torch._utils._rebuild_tensor_v2
