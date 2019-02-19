@@ -9,7 +9,7 @@ import time
 
 import torch
 import torch._utils
-STOPWORDS_ATEN = frozenset(['device','use','KE6900','ke6940','ke8950','ke8952','ke69xx','ke89xx'])
+STOPWORDS_ATEN = frozenset(['device','use','KE6900','ke6940','ke8950','ke8952','ke69xx','ke89xx','work'])
 
 try:
     torch._utils._rebuild_tensor_v2
@@ -591,7 +591,7 @@ if __name__ == '__main__':
         Sintent_idx = '========================(intentQ' + str(i + 1) + ')========================'
         print('%s' %(Sintent_idx))
         for j, ques in enumerate(intent_list[i]):
-            print('question %d - %d : %s' % (i, j, ques))
+            print('question %d - %d : %s' % (i+1, j, ques))
 
 
             anslist = process(ques, True, candidates=None, top_n=3)
