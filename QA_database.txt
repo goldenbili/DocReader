@@ -145,9 +145,9 @@ in video transmission.
 
 [Intent:]
 intentQ8
-What is the purpose of buttons labeled 'Graphics' and 'Video' on the front panel of the KE6900 and 6940?
-What is the purpose of buttons labeled 'Graphics' and 'Video' at the KE6900 and 6940?
-What is the purpose of buttons labeled 'Graphics' and 'Video' ?
+What is the purpose of buttons labeled Graphics and Video on the front panel of the KE6900 and KE6940 ?
+What is the purpose of buttons labeled Graphics and Video at the KE6900 and KE6940 ?
+What is the purpose of buttons labeled Graphics and Video ?
 [End]
 
 [Key Word:]
@@ -158,7 +158,7 @@ Video
 [End]
 
 [Ans:]
-The 'Graphics' button is used for transmitting text or still image, but the 'Video' button 
+The Graphics button is used for transmitting text or still image, but the Video button 
 is used to transmit moving picture, for example, watching a video clip from a computer.
 [End]
 

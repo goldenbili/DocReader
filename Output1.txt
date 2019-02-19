@@ -93,7 +93,7 @@ The maximum limitation bandwidth is 500Mbps. It may be set by using the RS-232 c
 
 Yes, KE6900 and KE6940 both use lossless compression in video transmission.
 
-The 'Graphics' button and the 'Video' button use different image compressions depending on the needs. The 'Graphics' button is used for transmitting text or still image, but the 'Video' button is used to transmit moving picture, for example, watching a video clip from a computer.
+The Graphics button and the Video button use different image compressions depending on the needs. The Graphics button is used for transmitting text or still image, but the Video button is used to transmit moving picture, for example, watching a video clip from a computer.
 
 There are three different methods to access the KE6900ST: First, Via a network; use a browser to log in to KE6900ST or use a utility supporting Telnet ; Any utility supporting Telnet or Microsoft Command Prompt will work; Second , KE6900ST comes equipped with a serial connection; so any serial communications utilitycan be used to access the unit the protocols and commands are provided in the unit's manual; Third ,  The unit also provides an OSD, so users can connect to the unit with a keyboard, mouse and monitorfor local access.
 
