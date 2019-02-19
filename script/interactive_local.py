@@ -9,6 +9,7 @@ import time
 
 import torch
 import torch._utils
+STOPWORDS_ATEN = frozenset(['device','use','KE6900','ke6940','ke8950','ke8952','ke69xx','ke89xx'])
 
 try:
     torch._utils._rebuild_tensor_v2
@@ -607,8 +608,7 @@ if __name__ == '__main__':
                 for quesOneWord in enumerate(quesToken, 1):
                     if quesOneWord[1] != '':
                         tokenIndex = [m.start() for m in re.finditer(quesOneWord[1], ans_low)]
-                        if (len(tokenIndex) != 0 and quesOneWord[1] not in STOPWORDS and quesOneWord[1] != 'device' and
-                                quesOneWord[1] != 'use'):
+                        if (len(tokenIndex) != 0 and quesOneWord[1] not in STOPWORDS and quesOneWord[1] not in STOPWORDS_ATEN):
                             point = point + 1
                 pointList.append(point)
 
