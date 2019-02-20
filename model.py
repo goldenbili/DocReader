@@ -303,7 +303,7 @@ class DocReader(object):
         loss.backward()
 
         # Clip gradients
-        torch.nn.utils.clip_grad_norm(self.network.parameters(),
+        torch.nn.utils.clip_grad_norm_(self.network.parameters(),
                                       self.args.grad_clipping)
 
         # Update parameters
@@ -313,7 +313,8 @@ class DocReader(object):
         # Reset any partially fixed parameters (e.g. rare words)
         self.reset_parameters()
 
-        return loss.item(), ex[0].size(0)
+        #return loss.item(), ex[0].size(0)
+        return loss.data[0], ex[0].size(0)
 
     def reset_parameters(self):
         """Reset any partially fixed parameters to original states."""
