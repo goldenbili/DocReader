@@ -605,6 +605,7 @@ if __name__ == '__main__':
             for m, ans in enumerate(anslist[0], 1):
                 point = 0
                 ans_low = ans.lower()
+                ans_low = replaceMultiple(ans_low, Apotoken, '')
                 for quesOneWord in enumerate(quesToken, 1):
                     if quesOneWord[1] != '':
                         tokenIndex = [m.start() for m in re.finditer(quesOneWord[1], ans_low)]
